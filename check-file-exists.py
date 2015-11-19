@@ -16,7 +16,7 @@ def readFile(filename):
 
 def main():
     if len(sys.argv) == 2:
-        filename = sys.argv[1]                           
+        filename = sys.argv[1]
         if not os.path.isfile(filename):
             print("File: ", filename, " Doesn't Exist.")
             print("Exiting....")
