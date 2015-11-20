@@ -1,18 +1,16 @@
+#1/usr/bin/env python
 
 '''
-# Script Name	: check-file-exists.py
-# Author		: Shailendra Patel
-# Created		:
-# Last Modified	:
-# Version		:
-
-# Description	: Batch renames file's extension in a given directory
+Batch renames file's extension in a given directory
 '''
 
 import os
 import sys
 from os.path import join
 from os.path import splitext
+
+__version__ = '0.2'
+__author__ = 'Shailendra Patel'
 
 def main():
     '''
