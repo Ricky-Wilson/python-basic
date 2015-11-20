@@ -1,4 +1,4 @@
-# Pythhon-Basics
+# Python-Basics
 Basic Python Programs.
 
 Goto http://geekizer.com for more.
