@@ -1,3 +1,11 @@
+# Script Name	: check-file-exists.py
+# Author		: Shailendra Patel
+# Created		:
+# Last Modified	:
+# Version		:
+
+# Description	: Batch rename file extensions.
+
 import os,sys
 
 if len(sys.argv) == 4:
