@@ -1,23 +1,33 @@
+
+'''
 # Script Name	: check-file-exists.py
 # Author		: Shailendra Patel
 # Created		:
 # Last Modified	:
 # Version		:
 
-# Description	: Batch rename file extensions.
+# Description	: Batch renames file's extension in a given directory
+'''
 
-import os,sys
+import os
+import sys
+from os.path import join
+from os.path import splitext
 
-if len(sys.argv) == 4:
-    work_dir = sys.argv[1]
-    old_ext = sys.argv[2]
-    new_ext = sys.argv[3]
+def main():
+    '''
+    Add doc string here.
+    '''
+    try:
+        work_dir, old_ext, new_ext = sys.argv[1:]
+    except ValueError:
+        sys.exit("Usage: {} directory old-ext new-ext".format(__file__))
 
-    files = os.listdir(work_dir)
-    for filename in files:
-        file_ext = os.path.splitext(filename)[1]
-        if old_ext == file_ext:
+    for filename in os.listdir(work_dir):
+        if old_ext == splitext(filename)[1]:
             newfile = filename.replace(old_ext, new_ext)
-            os.rename(os.path.join(work_dir, filename), os.path.join(work_dir, newfile))
-else:
-    print("Usage: ", str(sys.argv[0]), "directory old-ext new-ext")
+            os.rename(join(work_dir, filename), join(work_dir, newfile))
+
+
+if __name__ == '__main__':
+    main()
